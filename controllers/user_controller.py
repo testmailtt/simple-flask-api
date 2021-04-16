@@ -6,7 +6,8 @@ from models import User
 
 class UserController(Resource):
     def get(self):
-        return {"response": "User"}
+        users = User.query.all()
+        return {"Users": [i.json() for i in users]}
 
     def post(self):
         data = request.json

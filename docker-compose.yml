@@ -1,12 +1,13 @@
 version: "3.7"
 services:
   web:
-    image: testmailt46/simple-flask-api:version1.1
+    image: testmailt46/simple-flask-api:version1.2
     ports:
       - "5000:5000"
     env_file:
       - ./.env
-    depends_on: -db
+    depends_on:
+      - db
   db:
     image: postgres:10
     env_file: .env
