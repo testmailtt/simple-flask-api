@@ -7,11 +7,11 @@ from db_setup import db
 
 load_dotenv(find_dotenv())
 
-DBUSER = os.environ["POSTGRES_USER"]
-DBPASS = os.environ["POSTGRES_PASSWORD"]
-DBHOST = os.environ["POSTGRES_HOSTNAME"]
-DBPORT = "5432"
-DBNAME = os.environ["POSTGRES_DB"]
+# DBUSER = os.environ["POSTGRES_USER"]
+# DBPASS = os.environ["POSTGRES_PASSWORD"]
+# DBHOST = os.environ["POSTGRES_HOSTNAME"]
+# DBPORT = "5432"
+# DBNAME = os.environ["POSTGRES_DB"]
 
 app = Flask(__name__)
 

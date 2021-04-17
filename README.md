@@ -58,5 +58,5 @@ docker-compose up -d --build
 # Create table
 
 ```
-docker-compose exec web python manage.py create_db
+docker-compose exec api python manage.py create_db
 ```

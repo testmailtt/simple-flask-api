@@ -1,5 +1,5 @@
 from flask.cli import FlaskGroup
-from api import app
+from app import app
 from db_setup import db
 
 

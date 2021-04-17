@@ -3,11 +3,8 @@ services:
   api:
     build: .
     # image: testmailt46/simple-flask-api:version1.6
-    command: python api.py
     ports:
       - "5000:5000"
-    env_file:
-      - .env
     environment:
       POSTGRES_HOSTNAME: db
       SQLALCHEMY_DATABASE_URI: postgresql+psycopg2://test:test@db/test
