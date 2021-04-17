@@ -1,11 +1,11 @@
 version: "3.8"
 services:
   api:
-    image: testmailt46/simple-flask-api:version1.4
+    image: testmailt46/simple-flask-api:version1.5
     ports:
       - "5000:5000"
     environment:
-      POSTGRES_HOSTNAME: "db"
+      POSTGRES_HOSTNAME: db
     depends_on:
       - db
   db:
