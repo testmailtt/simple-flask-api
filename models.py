@@ -15,6 +15,6 @@ class User(db.Model):
         return {"username": self.username}
 
 
-if __name__ == "__main__":
-    db.create_all()
-    db.session.commit()
+# if __name__ == "__main__":
+#     db.create_all()
+#     db.session.commit()

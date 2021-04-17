@@ -5,8 +5,8 @@ docker build -t $DOCKER_ACC/$DOCKER_REPO:version1.0 .
 sudo docker push $DOCKER_ACC/$DOCKER_REPO:version1.0
 docker login --username=yourhubusername --password=yourpassword
 
-docker build -t testmailt46/simple-flask-api:version1.0 .
-docker push testmailt46/simple-flask-api:version1.6
+docker build -t testmailt46/simple-flask-api:version1.7 .
+docker push testmailt46/simple-flask-api:version1.7
 docker pull testmailt46/simple-flask-api:version1.0
 ```
 
@@ -48,3 +48,15 @@ conn = psycopg2.connect("dbname=test user=postgres")
 
 import psycopg2
 conn = psycopg2.connect("postgresql://unicorn_user:magical_password@localhost:5432/hello_flask_devrainbow_database")
+
+
+# Spin up two container
+```
+docker-compose up -d --build
+```
+
+# Create table
+
+```
+docker-compose exec web python manage.py create_db
+```
