@@ -3,5 +3,6 @@ COPY . /app
 WORKDIR /app
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
+RUN pip install psycopg2
 ENTRYPOINT ["python"]
 CMD ["api.py"]
