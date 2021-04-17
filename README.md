@@ -6,7 +6,7 @@ sudo docker push $DOCKER_ACC/$DOCKER_REPO:version1.0
 docker login --username=yourhubusername --password=yourpassword
 
 docker build -t testmailt46/simple-flask-api:version1.0 .
-docker push testmailt46/simple-flask-api:version1.3
+docker push testmailt46/simple-flask-api:version1.6
 docker pull testmailt46/simple-flask-api:version1.0
 ```
 
