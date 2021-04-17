@@ -60,3 +60,7 @@ docker-compose up -d --build
 ```
 docker-compose exec api python manage.py create_db
 ```
+
+```
+docker-compose down
+```
