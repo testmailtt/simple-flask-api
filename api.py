@@ -9,19 +9,20 @@ load_dotenv(find_dotenv())
 
 DBUSER = os.environ["POSTGRES_USER"]
 DBPASS = os.environ["POSTGRES_PASSWORD"]
-DBHOST = "db"
+DBHOST = os.environ["POSTGRES_HOSTNAME"]
 DBPORT = "5432"
 DBNAME = os.environ["POSTGRES_DB"]
 
 app = Flask(__name__)
 
 api = Api(app)
-
-app.config[
-    "SQLALCHEMY_DATABASE_URI"
-] = "postgresql://{user}:{passwd}@{host}:{port}/{db}".format(
-    user=DBUSER, passwd=DBPASS, host=DBHOST, port=DBPORT, db=DBNAME
+print(
+    "postgresql://{user}:{passwd}@{host}:{port}/{db}".format(
+        user=DBUSER, passwd=DBPASS, host=DBHOST, port=DBPORT, db=DBNAME
+    )
 )
+
+app.config["SQLALCHEMY_DATABASE_URI"] = os.environ["DATABASE_URL"]
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = True
 
 db.init_app(app)
